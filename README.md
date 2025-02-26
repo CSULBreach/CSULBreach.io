@@ -5,8 +5,20 @@
 - Utilizing React for the UIX
 - Domain: CSULBreach
 
-## Website Idea 
+## Website Ideas
+
+- Main Page
+  - About 
+  - FAQ
+  - Event Infos
+ 
+- Linktree
+- Events & Orgs
+- Board
+
+Website Collors - #1D2E6C & #FFFFFF for logo
+
+Theme Controller - (https://daisyui.com/components/theme-controller/)
 
 How to integrate tailwind css?
 
-DAYZUI to format code
