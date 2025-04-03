@@ -1,0 +1,118 @@
+#root {
+  max-width: 100%; /* Ensure it spans the full width of the screen */
+  margin: 0 auto;
+  padding: 0; /* Remove extra padding */
+  text-align: center;
+  box-sizing: border-box; /* Include padding and border in the element's total width/height */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent sizing across elements */
+  width: 100%; /* Make the body span the full width */
+  height: 100%; /* Make the body span the full height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.toolbar-container {
+  display: flex;
+  justify-content: space-between; /* Space out the logo and navigation */
+  align-items: center; /* Vertically center the items */
+  background-color: #333; /* Dark background color */
+  color: white;
+  padding: 0 20px; /* Add horizontal padding */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the toolbar spans the full width */
+  height: 60px; /* Set a fixed height for the toolbar */
+  z-index: 1000;
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center; /* Center the toolbar links */
+  flex-wrap: wrap; /* Allow wrapping if the screen is too small */
+  width: 100%; /* Ensure the toolbar spans the full width */
+}
+
+.toolbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center the list items */
+  margin: 0;
+  padding: 0;
+}
+
+.toolbar li {
+  margin: 0 15px; /* Add spacing between links */
+}
+
+.toolbar a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+  transition: text-shadow 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.toolbar a:hover {
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; /* Add a glow effect */
+  color: #1D2E6C; /* Optional: Change the color on hover */
+}
+
+.theme-toggle-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.theme-toggle-button:hover {
+  opacity: 0.8;
+}
+
+.logo {
+  height: 50px; /* Adjust the height to fit within the toolbar */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add spacing between the logo and the navigation */
+  transition: filter 300ms; /* Smooth transition for hover effects */
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa); /* Add a hover effect */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar-container {
+    flex-direction: column; /* Stack the toolbar vertically */
+    height: auto; /* Allow the height to adjust dynamically */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .toolbar ul {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center the links */
+  }
+
+  .toolbar li {
+    margin: 10px 0; /* Add spacing between links */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Add spacing below the logo */
+  }
+}
