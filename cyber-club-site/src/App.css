@@ -47,7 +47,7 @@ body {
 }
 
 .toolbar li {
-  margin: 0 15px; /* Add spacing between links */
+  margin: 0 30px; /* Add spacing between links */
 }
 
 .toolbar a {
@@ -58,8 +58,8 @@ body {
 }
 
 .toolbar a:hover {
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; /* Add a glow effect */
-  color: #1D2E6C; /* Optional: Change the color on hover */
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; /* Default white glow */
+  transition: text-shadow 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .theme-toggle-button {
@@ -75,18 +75,21 @@ body {
 }
 
 .logo {
-  height: 50px; /* Adjust the height to fit within the toolbar */
+  height: 85px; /* Increase the height to make it bigger */
   width: auto; /* Maintain aspect ratio */
-  margin-right: 20px; /* Add spacing between the logo and the navigation */
-  transition: filter 300ms; /* Smooth transition for hover effects */
+  margin-right: 15px; /* Add spacing between the logo and the navigation */
+  margin-left: 25px; /* Shift the logo slightly to the right */
+  transition: filter 300ms, transform 300ms; /* Smooth transition for hover effects */
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa); /* Add a hover effect */
+  filter: drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 20px #1D2E6C); /* Stronger glow effect */
+  transform: scale(1.4); /* Slightly increase the size */
+  transition: transform 300ms ease, filter 300ms ease; /* Smooth transition for both effects */
 }
 
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 6em #61dafbaa);
 }
 
 
