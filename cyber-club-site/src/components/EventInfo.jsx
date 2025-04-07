@@ -1,9 +1,7 @@
 import React from 'react';
-import { useTheme } from './ThemeController';
+import "./EventInfo.css"
 
 const EventInfo = () => {
-  const { theme } = useTheme();
-
   return (
     <div className="themed-container">
       <h2>Event Information</h2>

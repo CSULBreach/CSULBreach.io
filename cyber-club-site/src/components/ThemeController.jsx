@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const ThemeContext = createContext();
 
@@ -22,6 +22,12 @@ export const ThemeProvider = ({ children }) => {
   const toggleTheme = () => {
     setTheme(prevTheme => (prevTheme === lightTheme ? darkTheme : lightTheme));
   };
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty('--primary-color', theme.primaryColor);
+    root.style.setProperty('--secondary-color', theme.secondaryColor);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

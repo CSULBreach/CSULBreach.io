@@ -15,20 +15,25 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Ensure the toolbar-container does not overlap with the themed-container */
 .toolbar-container {
   display: flex;
   justify-content: space-between; /* Space out the logo and navigation */
   align-items: center; /* Vertically center the items */
-  background-color: #333; /* Dark background color */
-  color: white;
   padding: 0 20px; /* Add horizontal padding */
-  position: fixed;
+  position: fixed; /* Keep the toolbar fixed at the top */
   top: 0;
   left: 0;
   width: 100%; /* Ensure the toolbar spans the full width */
   height: 60px; /* Set a fixed height for the toolbar */
   z-index: 1000;
   box-sizing: border-box; /* Include padding in the width calculation */
+  background-color: var(--secondary-color); /* Use theme color */
+  color: var(--primary-color); /* Use theme color */
+}
+
+.containers-difference{
+  
 }
 
 .toolbar {
@@ -74,6 +79,21 @@ body {
   opacity: 0.8;
 }
 
+/* Add spacing below the toolbar-container */
+.page-content {
+  padding-top: 80px; /* Add space to account for the fixed toolbar height */
+}
+
+.themed-container {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px; /* Set a maximum width for the container */
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme changes */
+}
+
 .logo {
   height: 85px; /* Increase the height to make it bigger */
   width: auto; /* Maintain aspect ratio */
@@ -86,10 +106,6 @@ body {
   filter: drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 20px #1D2E6C); /* Stronger glow effect */
   transform: scale(1.4); /* Slightly increase the size */
   transition: transform 300ms ease, filter 300ms ease; /* Smooth transition for both effects */
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 6em #61dafbaa);
 }
 
 

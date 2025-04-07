@@ -1,9 +1,7 @@
 import React from 'react';
-import { useTheme } from './ThemeController';
+import "./About.css"
 
 const About = () => {
-  const { theme } = useTheme();
-
   return (
     <div className="themed-container">
       <h2>About Us</h2>

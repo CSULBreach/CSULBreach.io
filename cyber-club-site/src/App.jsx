@@ -109,6 +109,7 @@ function App() {
               {isDarkMode ? '🌙' : '☀️'}
             </button>
           </div>
+          <div className="page-content">
             <Routes>
               <Route path="/about" element={<About />} />
               <Route path="/faq" element={<FAQ />} />
@@ -117,6 +118,7 @@ function App() {
               <Route path="/linktree" element={<Linktree />} />
               <Route path="/" element={<Home />} />
             </Routes>
+          </div>
         </div>
       </Router>
     </div>
@@ -124,9 +126,8 @@ function App() {
 }
 
 function Home() {
-  const { theme } = useTheme();
   return (
-    <div style={{ backgroundColor: theme.secondaryColor, color: theme.primaryColor }}>
+    <div className="themed-container">
       <h2>Home</h2>
       <p>Welcome to the CULBreach website!</p>
     </div>

@@ -1,13 +1,12 @@
 import React from 'react';
-import { useTheme } from './ThemeController';
+import "./FAQ.css"
 
 const FAQ = () => {
-  const { theme } = useTheme();
-
   return (
     <div className="themed-container">
       <h2>FAQ</h2>
       <p>Frequently Asked Questions about CULBreach.</p>
+      <p>1. What is CULBreach?</p>
     </div>
   );
 };
